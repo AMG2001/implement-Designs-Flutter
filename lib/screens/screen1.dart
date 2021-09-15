@@ -6,6 +6,8 @@ class Screen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -16,15 +18,13 @@ class Screen1 extends StatelessWidget {
               color: kashmir,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 20,
-                ),
                 Container(
                   margin: EdgeInsets.only(top: 25),
                   child: Image(
                     image: AssetImage('images/shoppingGirl.png'),
-                    height: 450,
+                    height: screenHeight / 1.8,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -39,19 +39,19 @@ class Screen1 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.white,
                   ),
-                  height: 350,
-                  width: double.infinity,
+                  height: screenHeight / 2.3,
+                  width: screenWidth,
                   margin: EdgeInsets.all(10),
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 30,
+                        height: screenHeight / 35,
                       ),
                       Container(
                         child: Text(
                           'The Best Way To Manage Money And Accounts',
                           style: TextStyle(
-                              fontSize: 25,
+                              fontSize: screenWidth / 15,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Roboto'),
                           textAlign: TextAlign.center,
@@ -59,18 +59,19 @@ class Screen1 extends StatelessWidget {
                         margin: EdgeInsets.all(10),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: screenHeight / 60,
                       ),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 50),
                         child: Text(
                           'Manage your every penny and transaction with the eas',
-                          style: TextStyle(fontFamily: 'Roboto', fontSize: 15),
+                          style: TextStyle(
+                              fontFamily: 'Roboto', fontSize: screenWidth / 24),
                           textAlign: TextAlign.center,
                         ),
                       ),
                       SizedBox(
-                        height: 50,
+                        height: screenHeight / 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

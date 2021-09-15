@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:insta_design/screens/screen1.dart';
 import 'package:insta_design/style/styling.dart';
 
 void main() {
@@ -29,27 +30,24 @@ class scaffold extends StatefulWidget {
 class _scaffoldState extends State<scaffold> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon:Icon( Icons.home_filled)),
-          BottomNavigationBarItem(icon:Icon( Icons.tv_sharp)),
-          BottomNavigationBarItem(icon:Icon( Icons.qr)),
-          BottomNavigationBarItem(icon:Icon( Icons.home_filled)),
-          BottomNavigationBarItem(icon:Icon( Icons.home_filled)),
-        ],
-      ),
-      body: Column(
-        children: [
-          Container(
-
-          ),
-          Row(),
-          SingleChildScrollView(
-
-          ),
-        ],
-      ),
-    );
+    return Screen1();
+    // return Scaffold(
+    //   bottomNavigationBar: BottomNavigationBar(
+    //     items: [
+    //       BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
+    //       BottomNavigationBarItem(icon: Icon(Icons.tv_sharp)),
+    //       // BottomNavigationBarItem(icon:Icon( Icons.)),
+    //       BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
+    //       BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
+    //     ],
+    //   ),
+    //   body: Column(
+    //     children: [
+    //       Container(),
+    //       Row(),
+    //       SingleChildScrollView(),
+    //     ],
+    //   ),
+    // );
   }
 }
